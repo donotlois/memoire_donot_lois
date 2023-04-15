@@ -1,0 +1,961 @@
+[
+    {
+        "id": "d0a51cd33c90fc0b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "f26256e43133f102",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2eeb3d72ec77c859",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "bc9440415bc59045",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "db4free.net",
+        "port": "3306",
+        "db": "gemblouxlouvain",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "d1213a8842cc6dbf",
+        "type": "serial-port",
+        "serialport": "COM7",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "6fbb336d91f12850",
+        "type": "serial-port",
+        "serialport": "COM7",
+        "serialbaud": "9600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "$",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "1611acf13f1eb436",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 12,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "f1c10f8e42870de1",
+        "type": "ui_group",
+        "name": "Graphiques",
+        "tab": "b873f4f18ca59b70",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "b873f4f18ca59b70",
+        "type": "ui_tab",
+        "name": "Mémoire Loïs Donot",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "770d19ef8a4374e3",
+        "type": "ui_group",
+        "name": "Valeurs",
+        "tab": "b873f4f18ca59b70",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "80b62f397f8019b3",
+        "type": "ui_group",
+        "name": "",
+        "tab": "b873f4f18ca59b70",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "3cc9d5c5de12c834",
+        "type": "MySQLdatabase",
+        "name": "",
+        "host": "https://databases.000webhost.com/",
+        "port": "3306",
+        "db": "id20564497_bdd_memoire",
+        "tz": "",
+        "charset": "UTF8"
+    },
+    {
+        "id": "bbf9608d51507023",
+        "type": "serial-port",
+        "serialport": "COM7",
+        "serialbaud": "57600",
+        "databits": "8",
+        "parity": "none",
+        "stopbits": "1",
+        "waitfor": "",
+        "dtr": "none",
+        "rts": "none",
+        "cts": "none",
+        "dsr": "none",
+        "newline": "\\n",
+        "bin": "false",
+        "out": "char",
+        "addchar": "",
+        "responsetimeout": "10000"
+    },
+    {
+        "id": "1c25415d.b8427f",
+        "type": "sqlitedb",
+        "db": "/home/pi/sqlite/nodered"
+    },
+    {
+        "id": "31f14418.dc50dc",
+        "type": "ui_group",
+        "name": "Report",
+        "tab": "401d066a.62ae48",
+        "order": 2,
+        "disp": false,
+        "width": "24"
+    },
+    {
+        "id": "9d5d0e0a.e0772",
+        "type": "ui_group",
+        "name": "Filters",
+        "tab": "401d066a.62ae48",
+        "order": 2,
+        "disp": true,
+        "width": "24"
+    },
+    {
+        "id": "a7e2730.babc99",
+        "type": "ui_group",
+        "name": "Solar 30 days",
+        "tab": "1bb3770b.b9a7c9",
+        "order": 1,
+        "disp": false,
+        "width": "4"
+    },
+    {
+        "id": "68451cd2.bb5e44",
+        "type": "ui_group",
+        "name": "Solar 7 days",
+        "tab": "1bb3770b.b9a7c9",
+        "order": 2,
+        "disp": false,
+        "width": "4"
+    },
+    {
+        "id": "3a578850.88b108",
+        "type": "ui_group",
+        "name": "Solar target",
+        "tab": "1bb3770b.b9a7c9",
+        "order": 3,
+        "disp": false,
+        "width": "4"
+    },
+    {
+        "id": "401d066a.62ae48",
+        "type": "ui_tab",
+        "name": "Report (New)",
+        "icon": "event_note",
+        "order": 12
+    },
+    {
+        "id": "1bb3770b.b9a7c9",
+        "type": "ui_tab",
+        "name": "KPI",
+        "icon": "trending_up",
+        "order": 13
+    },
+    {
+        "id": "92d9b0dde66dabb5",
+        "type": "mqtt-broker",
+        "name": "HiveMQ",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "6ffce855e53b4f28",
+        "type": "function",
+        "z": "d0a51cd33c90fc0b",
+        "name": "function 1",
+        "func": "m = msg.payload.split('$');\nL = { payload: parseFloat(m[3]) };\nHA = { payload: parseFloat(m[2]) };\nT = { payload: parseFloat(m[1]) };\nHS = { payload: parseFloat(m[0]) };\nreturn [HS, HA, T, L];\nreturn msg;\n",
+        "outputs": 4,
+        "noerr": 10,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 200,
+        "wires": [
+            [
+                "3f233306844e6f5d",
+                "3f7dee498497544e",
+                "874752c975c9fa5f"
+            ],
+            [
+                "fae0c671f83b5bdc",
+                "3e3a8ffc7e8f8929",
+                "4ee7f8be333c6645"
+            ],
+            [
+                "3fbdd2f48e1c635e",
+                "13ce889cad8ae2b8",
+                "636b8beeb85328b6"
+            ],
+            [
+                "c8d9970a2721f819",
+                "7370329b2e7f2739",
+                "dd0f075597069cee"
+            ]
+        ]
+    },
+    {
+        "id": "46ed57e8f97a062e",
+        "type": "comment",
+        "z": "d0a51cd33c90fc0b",
+        "name": "Température",
+        "info": "",
+        "x": 670,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "e79376b5924a29b3",
+        "type": "comment",
+        "z": "d0a51cd33c90fc0b",
+        "name": "Humidité du sol",
+        "info": "",
+        "x": 680,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "ee8489fcca12978c",
+        "type": "comment",
+        "z": "d0a51cd33c90fc0b",
+        "name": "Humidité de l'air",
+        "info": "",
+        "x": 680,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "bf6a5f3a6cd19a3e",
+        "type": "comment",
+        "z": "d0a51cd33c90fc0b",
+        "name": "Lumiere",
+        "info": "\n",
+        "x": 660,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "3f233306844e6f5d",
+        "type": "ui_chart",
+        "z": "d0a51cd33c90fc0b",
+        "name": "",
+        "group": "80b62f397f8019b3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Lumière",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 660,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "fae0c671f83b5bdc",
+        "type": "ui_chart",
+        "z": "d0a51cd33c90fc0b",
+        "name": "",
+        "group": "f1c10f8e42870de1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "label": "Température",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 670,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3fbdd2f48e1c635e",
+        "type": "ui_chart",
+        "z": "d0a51cd33c90fc0b",
+        "name": "",
+        "group": "80b62f397f8019b3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "Humidité de l'air",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 680,
+        "y": 420,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c8d9970a2721f819",
+        "type": "ui_chart",
+        "z": "d0a51cd33c90fc0b",
+        "name": "",
+        "group": "f1c10f8e42870de1",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "label": "Humidité du sol",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 680,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3f7dee498497544e",
+        "type": "ui_text",
+        "z": "d0a51cd33c90fc0b",
+        "group": "770d19ef8a4374e3",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Lumiere",
+        "format": "{{msg.payload}} dV",
+        "layout": "row-spread",
+        "className": "",
+        "x": 660,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "3e3a8ffc7e8f8929",
+        "type": "ui_text",
+        "z": "d0a51cd33c90fc0b",
+        "group": "770d19ef8a4374e3",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Température",
+        "format": "{{msg.payload}} °c",
+        "layout": "row-spread",
+        "className": "",
+        "x": 670,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "13ce889cad8ae2b8",
+        "type": "ui_text",
+        "z": "d0a51cd33c90fc0b",
+        "group": "770d19ef8a4374e3",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Humidité de l'air",
+        "format": "{{msg.payload}} %",
+        "layout": "row-spread",
+        "className": "",
+        "x": 680,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "7370329b2e7f2739",
+        "type": "ui_text",
+        "z": "d0a51cd33c90fc0b",
+        "group": "770d19ef8a4374e3",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Humidité du sol",
+        "format": "{{msg.payload}} %",
+        "layout": "row-spread",
+        "className": "",
+        "x": 680,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "3c8077bd77474659",
+        "type": "mysql",
+        "z": "d0a51cd33c90fc0b",
+        "mydb": "bc9440415bc59045",
+        "name": "",
+        "x": 870,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "874752c975c9fa5f",
+        "type": "function",
+        "z": "d0a51cd33c90fc0b",
+        "name": "function 2",
+        "func": "msg.topic = \"INSERT INTO lumiere( value )VALUES (\" + msg.payload + \");\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 140,
+        "wires": [
+            [
+                "3c8077bd77474659"
+            ]
+        ]
+    },
+    {
+        "id": "06b631b8bd1ccdb0",
+        "type": "mysql",
+        "z": "d0a51cd33c90fc0b",
+        "mydb": "bc9440415bc59045",
+        "name": "",
+        "x": 850,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "4ee7f8be333c6645",
+        "type": "function",
+        "z": "d0a51cd33c90fc0b",
+        "name": "function 3",
+        "func": "msg.topic = \"INSERT INTO temperature( value )VALUES (\" + msg.payload + \");\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 300,
+        "wires": [
+            [
+                "06b631b8bd1ccdb0"
+            ]
+        ]
+    },
+    {
+        "id": "6db595e556dd8c5b",
+        "type": "mysql",
+        "z": "d0a51cd33c90fc0b",
+        "mydb": "bc9440415bc59045",
+        "name": "",
+        "x": 850,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "636b8beeb85328b6",
+        "type": "function",
+        "z": "d0a51cd33c90fc0b",
+        "name": "function 4",
+        "func": "msg.topic = \"INSERT INTO HumAir( value )VALUES (\" + msg.payload + \");\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 460,
+        "wires": [
+            [
+                "6db595e556dd8c5b"
+            ]
+        ]
+    },
+    {
+        "id": "fcb1b40bf4f61694",
+        "type": "mysql",
+        "z": "d0a51cd33c90fc0b",
+        "mydb": "bc9440415bc59045",
+        "name": "",
+        "x": 850,
+        "y": 620,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd0f075597069cee",
+        "type": "function",
+        "z": "d0a51cd33c90fc0b",
+        "name": "function 5",
+        "func": "msg.topic = \"INSERT INTO HumSol( value )VALUES (\" + msg.payload + \");\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 620,
+        "wires": [
+            [
+                "fcb1b40bf4f61694"
+            ]
+        ]
+    },
+    {
+        "id": "1958cfa60659c4cb",
+        "type": "delay",
+        "z": "d0a51cd33c90fc0b",
+        "name": "",
+        "pauseType": "rate",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 310,
+        "y": 200,
+        "wires": [
+            [
+                "6ffce855e53b4f28"
+            ]
+        ]
+    },
+    {
+        "id": "b75ce9b9e8b0afe6",
+        "type": "mqtt in",
+        "z": "d0a51cd33c90fc0b",
+        "name": "",
+        "topic": "donotlois/data",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "92d9b0dde66dabb5",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 110,
+        "y": 200,
+        "wires": [
+            [
+                "1958cfa60659c4cb"
+            ]
+        ]
+    },
+    {
+        "id": "a6e24478494f1952",
+        "type": "mysql",
+        "z": "f26256e43133f102",
+        "mydb": "bc9440415bc59045",
+        "name": "",
+        "x": 470,
+        "y": 100,
+        "wires": [
+            [
+                "a862ac75f4dad3d2"
+            ]
+        ]
+    },
+    {
+        "id": "fe9dc0341af4a522",
+        "type": "function",
+        "z": "f26256e43133f102",
+        "name": "function 6",
+        "func": "msg.topic = \"select * from lumiere ORDER BY id DESC LIMIT 1;\" \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "a6e24478494f1952"
+            ]
+        ]
+    },
+    {
+        "id": "0b9f93898d311353",
+        "type": "inject",
+        "z": "f26256e43133f102",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "1",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a862ac75f4dad3d2",
+        "type": "function",
+        "z": "f26256e43133f102",
+        "name": "function 7",
+        "func": "msg.payload = msg.payload[0].value\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 660,
+        "y": 100,
+        "wires": [
+            [
+                "3ccf35b8d913e117"
+            ]
+        ]
+    },
+    {
+        "id": "82badeb115e713a9",
+        "type": "debug",
+        "z": "f26256e43133f102",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "3ccf35b8d913e117",
+        "type": "ui_chart",
+        "z": "f26256e43133f102",
+        "name": "",
+        "group": "f1c10f8e42870de1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "label": "charttest",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm:ss",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "",
+        "ymax": "",
+        "removeOlder": 1,
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 840,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    }
+]
